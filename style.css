@@ -1,0 +1,1481 @@
+/* =====================================================
+   SHANTHI PORTFOLIO - MAIN STYLESHEET
+   ===================================================== */
+
+/* =====================================================
+   1. GLOBAL
+   ===================================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    overflow-x: hidden;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a,
+input,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================================
+   2. SCROLLBAR
+   ===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        #7c3aed,
+        #2563eb
+    );
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        #8b5cf6,
+        #3b82f6
+    );
+}
+
+
+/* =====================================================
+   3. TEXT SELECTION
+   ===================================================== */
+
+::selection {
+    background: #7c3aed;
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   4. GRADIENT TEXT
+   ===================================================== */
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #a855f7,
+        #3b82f6,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* =====================================================
+   5. NAVBAR
+   ===================================================== */
+
+#navbar {
+    transition:
+        background 0.3s ease,
+        backdrop-filter 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.navbar-scrolled {
+    background: rgba(2, 6, 23, 0.88);
+
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.nav-link {
+    position: relative;
+
+    color: #94a3b8;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #a855f7,
+        #3b82f6
+    );
+
+    transition:
+        width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.mobile-link {
+    color: #cbd5e1;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.mobile-link:hover {
+    color: #a855f7;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =====================================================
+   6. GLASS CARD
+   ===================================================== */
+
+.glass-card {
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    border-radius:
+        1rem;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   7. PRIMARY BUTTON
+   ===================================================== */
+
+.primary-btn {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    padding:
+        0.8rem 1.3rem;
+
+    min-height: 46px;
+
+    border-radius:
+        0.7rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-shadow:
+        0 10px 30px
+        rgba(124, 58, 237, 0.25);
+}
+
+.primary-btn:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(124, 58, 237, 0.4);
+}
+
+.primary-btn:active {
+    transform:
+        translateY(-1px);
+}
+
+
+/* =====================================================
+   8. SECONDARY BUTTON
+   ===================================================== */
+
+.secondary-btn {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    padding:
+        0.8rem 1.3rem;
+
+    min-height: 46px;
+
+    border-radius:
+        0.7rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #e2e8f0;
+
+    font-weight: 600;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    border-color:
+        rgba(168, 85, 247, 0.35);
+
+    transform:
+        translateY(-3px);
+}
+
+.secondary-btn:active {
+    transform:
+        translateY(-1px);
+}
+
+
+/* =====================================================
+   9. SOCIAL BUTTON
+   ===================================================== */
+
+.social-btn {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius:
+        0.7rem;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    color: #94a3b8;
+
+    transition:
+        all 0.3s ease;
+}
+
+.social-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.social-btn:hover {
+    color: #ffffff;
+
+    background:
+        rgba(124, 58, 237, 0.2);
+
+    border-color:
+        rgba(168, 85, 247, 0.4);
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(124, 58, 237, 0.2);
+}
+
+
+/* =====================================================
+   10. SECTION TITLES
+   ===================================================== */
+
+.section-label {
+    color: #a855f7;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing:
+        0.15em;
+
+    margin-bottom:
+        0.7rem;
+}
+
+.section-title {
+    font-size:
+        clamp(2rem, 5vw, 3rem);
+
+    font-weight:
+        800;
+
+    line-height:
+        1.1;
+}
+
+
+/* =====================================================
+   11. INFO CARDS
+   ===================================================== */
+
+.info-card {
+    padding:
+        1.3rem;
+
+    border-radius:
+        0.8rem;
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition:
+        all 0.3s ease;
+}
+
+.info-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(168, 85, 247, 0.3);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+    min-width:
+        45px;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius:
+        0.7rem;
+
+    background:
+        rgba(124, 58, 237, 0.12);
+
+    color:
+        #a855f7;
+}
+
+
+/* =====================================================
+   12. SKILL CARDS
+   ===================================================== */
+
+.skill-card {
+    padding:
+        1.5rem;
+
+    border-radius:
+        1rem;
+
+    background:
+        rgba(15, 23, 42, 0.5);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.skill-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(168, 85, 247, 0.35);
+
+    box-shadow:
+        0 20px 40px
+        rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom:
+        1rem;
+
+    border-radius:
+        0.8rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.2),
+            rgba(37, 99, 235, 0.2)
+        );
+
+    color:
+        #c4b5fd;
+
+    font-weight:
+        800;
+
+    font-size:
+        1rem;
+}
+
+.skill-icon svg {
+    width:
+        25px;
+
+    height:
+        25px;
+}
+
+
+/* =====================================================
+   13. PROJECT CARDS
+   ===================================================== */
+
+.project-card {
+    overflow:
+        hidden;
+
+    border-radius:
+        1rem;
+
+    background:
+        rgba(15, 23, 42, 0.7);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(168, 85, 247, 0.35);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height:
+        210px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+.project-image::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    filter:
+        blur(35px);
+}
+
+.project-image svg {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.project-card:hover
+.project-image svg {
+    transform:
+        scale(1.15)
+        rotate(5deg);
+}
+
+.project-number {
+    color:
+        #64748b;
+
+    font-size:
+        0.8rem;
+
+    font-weight:
+        600;
+}
+
+.tech-tag {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        0.3rem 0.6rem;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+    color:
+        #94a3b8;
+
+    font-size:
+        0.75rem;
+}
+
+.project-link {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.4rem;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        500;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-link svg {
+    width:
+        17px;
+
+    height:
+        17px;
+}
+
+.project-link:hover {
+    color:
+        #a855f7;
+
+    transform:
+        translateX(2px);
+}
+
+
+/* =====================================================
+   14. PROJECT FILTER
+   ===================================================== */
+
+.filter-btn {
+    padding:
+        0.55rem 1rem;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color:
+        #94a3b8;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        500;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color:
+        #ffffff;
+
+    border-color:
+        rgba(168, 85, 247, 0.3);
+}
+
+.filter-btn.active {
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    border-color:
+        transparent;
+
+    box-shadow:
+        0 8px 25px
+        rgba(124, 58, 237, 0.25);
+}
+
+.project-hidden {
+    display:
+        none !important;
+}
+
+
+/* =====================================================
+   15. TIMELINE
+   ===================================================== */
+
+.timeline-dot {
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0.2rem;
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #2563eb
+        );
+
+    border:
+        5px solid
+        #020617;
+
+    box-shadow:
+        0 0 25px
+        rgba(124, 58, 237, 0.4);
+}
+
+
+/* =====================================================
+   16. CONTACT FORM
+   ===================================================== */
+
+.form-label {
+    display:
+        block;
+
+    margin-bottom:
+        0.5rem;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        600;
+}
+
+.form-input {
+    width:
+        100%;
+
+    padding:
+        0.85rem 1rem;
+
+    border-radius:
+        0.7rem;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    color:
+        #ffffff;
+
+    outline:
+        none;
+
+    font-family:
+        inherit;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.form-input::placeholder {
+    color:
+        #64748b;
+}
+
+.form-input:focus {
+    border-color:
+        #8b5cf6;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(139, 92, 246, 0.12);
+}
+
+textarea.form-input {
+    min-height:
+        150px;
+
+    resize:
+        vertical;
+}
+
+
+/* =====================================================
+   17. CONTACT CARD
+   ===================================================== */
+
+.contact-card {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        1rem;
+
+    padding:
+        1.2rem;
+
+    border-radius:
+        0.8rem;
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    color:
+        #ffffff;
+
+    transition:
+        all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(168, 85, 247, 0.3);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.15);
+}
+
+.contact-card > svg {
+    color:
+        #a855f7;
+
+    width:
+        25px;
+
+    height:
+        25px;
+
+    flex-shrink:
+        0;
+}
+
+
+/* =====================================================
+   18. RIPPLE EFFECT
+   ===================================================== */
+
+.primary-btn,
+.secondary-btn {
+    position:
+        relative;
+}
+
+.ripple {
+    position:
+        absolute;
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.35);
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    animation:
+        ripple-animation 0.6s linear;
+
+    pointer-events:
+        none;
+}
+
+@keyframes ripple-animation {
+    from {
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+        opacity:
+            1;
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            scale(30);
+
+        opacity:
+            0;
+    }
+}
+
+
+/* =====================================================
+   19. FLOAT ANIMATION
+   ===================================================== */
+
+@keyframes float {
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-15px);
+    }
+}
+
+.animate-float {
+    animation:
+        float 4s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   20. FADE UP ANIMATION
+   ===================================================== */
+
+@keyframes fadeUp {
+    0% {
+        opacity:
+            0;
+
+        transform:
+            translateY(30px);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation:
+        fadeUp 0.8s ease-out forwards;
+}
+
+
+/* =====================================================
+   21. CUSTOM PULSE
+   ===================================================== */
+
+@keyframes pulseSlow {
+    0%,
+    100% {
+        opacity:
+            1;
+    }
+
+    50% {
+        opacity:
+            0.5;
+    }
+}
+
+.animate-pulse-slow {
+    animation:
+        pulseSlow 3s infinite;
+}
+
+
+/* =====================================================
+   22. LIGHT MODE
+   ===================================================== */
+
+body.light-mode {
+    background:
+        #f8fafc;
+
+    color:
+        #0f172a;
+}
+
+
+/* Navbar */
+
+body.light-mode .navbar-scrolled {
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-bottom:
+        1px solid
+        rgba(15, 23, 42, 0.08);
+
+    box-shadow:
+        0 10px 40px
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* Navigation */
+
+body.light-mode .nav-link {
+    color:
+        #475569;
+}
+
+body.light-mode .nav-link:hover {
+    color:
+        #0f172a;
+}
+
+body.light-mode .mobile-link {
+    color:
+        #475569;
+}
+
+body.light-mode .mobile-link:hover {
+    color:
+        #7c3aed;
+}
+
+
+/* Glass cards */
+
+body.light-mode .glass-card {
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+    box-shadow:
+        0 20px 50px
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* Skill cards */
+
+body.light-mode .skill-card {
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+}
+
+body.light-mode .skill-card:hover {
+    border-color:
+        rgba(124, 58, 237, 0.25);
+}
+
+
+/* Project cards */
+
+body.light-mode .project-card {
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* Info cards */
+
+body.light-mode .info-card {
+    background:
+        rgba(15, 23, 42, 0.03);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* Text */
+
+body.light-mode .text-white {
+    color:
+        #0f172a !important;
+}
+
+body.light-mode .text-slate-300 {
+    color:
+        #334155 !important;
+}
+
+body.light-mode .text-slate-400 {
+    color:
+        #64748b !important;
+}
+
+
+/* Section background */
+
+body.light-mode .bg-slate-900\/50 {
+    background:
+        rgba(241, 245, 249, 0.75);
+}
+
+
+/* Secondary button */
+
+body.light-mode .secondary-btn {
+    background:
+        rgba(15, 23, 42, 0.04);
+
+    border-color:
+        rgba(15, 23, 42, 0.1);
+
+    color:
+        #334155;
+}
+
+body.light-mode .secondary-btn:hover {
+    background:
+        rgba(15, 23, 42, 0.08);
+
+    color:
+        #0f172a;
+}
+
+
+/* Social buttons */
+
+body.light-mode .social-btn {
+    background:
+        rgba(15, 23, 42, 0.04);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+    color:
+        #64748b;
+}
+
+body.light-mode .social-btn:hover {
+    color:
+        #7c3aed;
+
+    background:
+        rgba(124, 58, 237, 0.08);
+}
+
+
+/* Contact cards */
+
+body.light-mode .contact-card {
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+    color:
+        #0f172a;
+}
+
+
+/* Form */
+
+body.light-mode .form-label {
+    color:
+        #334155;
+}
+
+body.light-mode .form-input {
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    color:
+        #0f172a;
+
+    border-color:
+        rgba(15, 23, 42, 0.12);
+}
+
+body.light-mode .form-input::placeholder {
+    color:
+        #94a3b8;
+}
+
+body.light-mode .form-input:focus {
+    background:
+        #ffffff;
+}
+
+
+/* Tags */
+
+body.light-mode .tech-tag {
+    background:
+        rgba(15, 23, 42, 0.04);
+
+    border-color:
+        rgba(15, 23, 42, 0.06);
+
+    color:
+        #64748b;
+}
+
+
+/* Project links */
+
+body.light-mode .project-link {
+    color:
+        #475569;
+}
+
+body.light-mode .project-link:hover {
+    color:
+        #7c3aed;
+}
+
+
+/* Filter buttons */
+
+body.light-mode .filter-btn {
+    background:
+        rgba(15, 23, 42, 0.04);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+    color:
+        #64748b;
+}
+
+body.light-mode .filter-btn:hover {
+    color:
+        #0f172a;
+}
+
+body.light-mode .filter-btn.active {
+    color:
+        #ffffff;
+}
+
+
+/* Timeline */
+
+body.light-mode .timeline-dot {
+    border-color:
+        #f8fafc;
+}
+
+
+/* =====================================================
+   23. MOBILE RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size:
+            2.2rem;
+    }
+
+    .project-image {
+        height:
+            180px;
+    }
+
+    .glass-card {
+        border-radius:
+            0.9rem;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width:
+            100%;
+    }
+
+}
+
+
+/* =====================================================
+   24. SMALL MOBILE DEVICES
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .section-title {
+        font-size:
+            2rem;
+    }
+
+    .social-btn {
+        width:
+            42px;
+
+        height:
+            42px;
+    }
+
+    .skill-card {
+        padding:
+            1.25rem;
+    }
+
+    .project-image {
+        height:
+            160px;
+    }
+
+}
+
+
+/* =====================================================
+   25. REDUCED MOTION
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior:
+            auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+}
